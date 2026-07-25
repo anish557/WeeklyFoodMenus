@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Weekly Meal Plan Generator</title>
+<style>
+  :root { --green:#4CAF50; --green-d:#45a049; --ink:#2b2b2b; --muted:#777; --line:#eee; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, Arial, sans-serif; background:#fafafa; color:var(--ink);
+         padding:20px; max-width:1000px; margin:auto; }
+  h1 { margin:0 0 4px; }
+  .sub { color:var(--muted); margin:0 0 16px; font-size:14px; }
+  button { padding:10px 16px; font-size:15px; background:var(--green); color:#fff; border:none;
+           border-radius:6px; cursor:pointer; }
+  button:hover { background:var(--green-d); }
+  button.ghost { background:#fff; color:var(--ink); border:1px solid #ccc; padding:4px 10px; font-size:13px; }
+  button.ghost:hover { background:#f2f2f2; }
+  .toolbar { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:18px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px; }
+  .day { background:#fff; padding:14px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.1); }
+  .day h3 { margin:0 0 10px; display:flex; justify-content:space-between; align-items:baseline; }
+  .macro { font-size:12px; color:var(--muted); font-weight:normal; }
+  .macro.ok { color:var(--green-d); font-weight:bold; }
+  .slot { padding:7px 0; border-top:1px solid var(--line); }
+  .slot:first-of-type { border-top:none; }
+  .slot .lbl { font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .slot .row { display:flex; justify-content:space-between; gap:8px; align-items:center; }
+  .slot .name { font-weight:600; }
+  .slot .p { font-size:12px; color:var(--muted); white-space:nowrap; }
+  .pill { display:inline-block; font-size:10px; padding:1px 6px; border-radius:10px; margin-left:6px; vertical-align:middle; }
+  .pill.eat { background:#fde8cf; color:#8a4b00; }
+  .pill.prep { background:#e3e0ff; color:#3f34a3; }
+  .pill.rough { background:#eee; color:#666; }
+  .pill.sync { background:#ffe0e0; color:#a30000; }
+  .supp { margin-top:8px; font-size:12px; color:#8a6d00; background:#fff8e1; padding:6px 8px; border-radius:6px; }
+  .card { background:#fff; padding:16px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.1); margin-top:22px; }
+  .card h2 { margin:0 0 12px; font-size:18px; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; }
+  .chip { background:#f1f1f1; border-radius:14px; padding:4px 10px; font-size:13px; }
+  .chip.shared { background:#dff3e0; color:#256b2b; font-weight:600; }
+  .chip .n { color:var(--muted); font-weight:normal; margin-left:4px; }
+  form label { display:block; font-size:13px; margin:8px 0 3px; color:#444; }
+  form input, form select { padding:7px; border:1px solid #ccc; border-radius:5px; width:100%; font-size:14px; }
+  .inline { display:flex; gap:10px; }
+  .inline > div { flex:1; }
+  .slotbox { display:flex; gap:14px; margin-top:4px; }
+  .slotbox label { display:flex; align-items:center; gap:5px; font-size:14px; margin:0; }
+  .slotbox input { width:auto; }
+  .pending-item { font-size:14px; padding:6px 0; border-top:1px solid var(--line); }
+  .muted { color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+
+<h1>Weekly Meal Plan Generator</h1>
+<p class="sub">Constraint-aware: aims for <strong>≥70g protein/day</strong> (tops up with your Fairlife shake / Greek yogurt),
+avoids repeats, keeps restaurants apart, prefers simple lunches. Nutrition is rough (USDA, offline). No network calls.</p>
+
+<div class="toolbar">
+  <button onclick="app.generate()">Generate Weekly Plan</button>
+  <span class="muted" id="status"></span>
+</div>
+
+<div id="week" class="grid"></div>
+
+<div class="card" id="shoppingCard" style="display:none">
+  <h2>Weekly Shopping List <span class="muted">(green = shared across meals)</span></h2>
+  <div id="shopping" class="chips"></div>
+</div>
+
+<div class="card">
+  <h2>Add a New Meal</h2>
+  <p class="muted">Saved locally in your browser. Export the list, then run <code>node scripts/sync.mjs</code> to fetch real USDA nutrition and merge it into the dataset.</p>
+  <form onsubmit="app.addItem(event)">
+    <label>Name</label>
+    <input id="f-name" required placeholder="e.g. Masala Oats" />
+    <div class="inline">
+      <div>
+        <label>Ingredients (comma-separated, lowercase)</label>
+        <input id="f-ing" placeholder="oats, milk, onion, tomato" />
+      </div>
+    </div>
+    <label>Meal slot(s)</label>
+    <div class="slotbox">
+      <label><input type="checkbox" value="breakfast" class="f-slot" /> Breakfast</label>
+      <label><input type="checkbox" value="lunch" class="f-slot" /> Lunch</label>
+      <label><input type="checkbox" value="dinner" class="f-slot" /> Dinner</label>
+    </div>
+    <div class="inline">
+      <div><label>Serving amount</label><input id="f-amt" type="number" value="1" min="1" /></div>
+      <div><label>Serving unit</label>
+        <select id="f-unit"><option>plate</option><option>bowl</option><option>cup</option><option>piece</option><option>glass</option><option>sandwich</option><option>wrap</option></select>
+      </div>
+      <div><label>Protein (g, optional)</label><input id="f-prot" type="number" min="0" placeholder="est." /></div>
+    </div>
+    <div style="margin-top:14px; display:flex; gap:10px;">
+      <button type="submit">Add Meal</button>
+      <button type="button" class="ghost" onclick="app.exportPending()">Export pending-items.json</button>
+    </div>
+  </form>
+  <div id="pendingList"></div>
+</div>
+
+<script src="menu-data.js"></script>
+<script>
+const app = (() => {
+  const DAYS = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+  const PROTEIN_TARGET = 70;
+  const LS_WEEK = "wfm_week", LS_PENDING = "wfm_pending";
+
+  const DATA = window.MENU_DATA || { items: [], supplements: [] };
+  const SUPP = DATA.supplements || [];
+  const SHAKE = SUPP.find(s => s.id === "supp-fairlife") || { name:"Protein Shake", protein_g:30, calories:150 };
+  const YOG   = SUPP.find(s => s.id === "supp-greek-yogurt") || { name:"Greek Yogurt", protein_g:15, calories:100 };
+
+  const has = (it, tag) => (it.tags || []).includes(tag);
+  const rnd = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+  function loadPending() { try { return JSON.parse(localStorage.getItem(LS_PENDING)) || []; } catch { return []; } }
+  function savePending(p) { localStorage.setItem(LS_PENDING, JSON.stringify(p)); }
+
+  // Full pool = dataset items + user-added pending items (with a rough client-side estimate).
+  function pool() {
+    const pend = loadPending().map(p => ({
+      ...p,
+      _pending: true,
+      nutrition: p.nutrition || { protein_g: p.est_protein ?? (has(p,"high-protein") ? 25 : 12), calories: 400, source: "pending" }
+    }));
+    return [...DATA.items, ...pend];
+  }
+
+  function choose(slot, { used = new Set(), preferSimple = false, noEatOut = false } = {}) {
+    const all = pool();
+    let cands = all.filter(it => (it.slots || []).includes(slot));
+    if (noEatOut) cands = cands.filter(it => !has(it, "eat-out") && !has(it, "backup"));
+    let fresh = cands.filter(it => !used.has(it.id));
+    if (fresh.length) cands = fresh; // avoid repeats when possible
+    if (preferSimple) {
+      const simple = cands.filter(it => has(it, "simple-lunch") || has(it, "quick"));
+      if (simple.length >= 2) cands = simple;
+    }
+    return rnd(cands.length ? cands : all.filter(it => (it.slots || []).includes(slot)));
+  }
+
+  function computeDay(meals) {
+    let protein = meals.reduce((s, m) => s + (m.nutrition?.protein_g || 0), 0);
+    let calories = meals.reduce((s, m) => s + (m.nutrition?.calories || 0), 0);
+    const supplements = [];
+    let guard = 0;
+    while (protein < PROTEIN_TARGET && guard < 5) {
+      const add = (PROTEIN_TARGET - protein) >= 20 ? SHAKE : YOG;
+      supplements.push(add);
+      protein += add.protein_g;
+      calories += add.calories;
+      guard++;
+    }
+    return { protein, calories, supplements };
+  }
+
+  function generate() {
+    const used = new Set();
+    let prevEatOut = false;
+    const week = DAYS.map(day => {
+      const breakfast = choose("breakfast", { used });
+      const lunch = choose("lunch", { used, preferSimple: true });
+      const dinner = choose("dinner", { used, noEatOut: prevEatOut });
+      prevEatOut = has(dinner, "eat-out") || has(dinner, "backup");
+      [breakfast, lunch, dinner].forEach(m => used.add(m.id));
+      const meals = { breakfast, lunch, dinner };
+      return { day, meals, ...computeDay([breakfast, lunch, dinner]) };
+    });
+    state.week = week;
+    save();
+    render();
+  }
+
+  function swap(dayIndex, slot) {
+    const week = state.week;
+    const used = new Set();
+    week.forEach((d, i) => ["breakfast","lunch","dinner"].forEach(s => {
+      if (!(i === dayIndex && s === slot)) used.add(d.meals[s].id);
+    }));
+    const noEatOut = slot === "dinner" && dayIndex > 0 &&
+      (has(week[dayIndex-1].meals.dinner, "eat-out") || has(week[dayIndex-1].meals.dinner, "backup"));
+    week[dayIndex].meals[slot] = choose(slot, { used, preferSimple: slot === "lunch", noEatOut });
+    const d = week[dayIndex];
+    Object.assign(d, computeDay(Object.values(d.meals)));
+    save();
+    render();
+  }
+
+  function badges(m) {
+    let b = "";
+    if (has(m, "eat-out") || has(m, "backup")) b += '<span class="pill eat">restaurant</span>';
+    if (has(m, "advance-prep")) b += '<span class="pill prep">prep 2 days ahead</span>';
+    if (m._pending) b += '<span class="pill sync">needs sync</span>';
+    else if (m.nutrition?.source !== "usda-fdc") b += '<span class="pill rough">rough est.</span>';
+    return b;
+  }
+
+  function slotHtml(dayIndex, slot, m) {
+    return `<div class="slot">
+      <div class="lbl">${slot}</div>
+      <div class="row">
+        <div class="name">${m.name}${badges(m)}</div>
+        <div class="p">${m.nutrition?.protein_g ?? "?"}g · <button class="ghost" onclick="app.swap(${dayIndex},'${slot}')">swap</button></div>
+      </div>
+    </div>`;
+  }
+
+  function render() {
+    const week = state.week;
+    const wrap = document.getElementById("week");
+    if (!week) { wrap.innerHTML = ""; return; }
+    wrap.innerHTML = week.map((d, i) => {
+      const ok = d.protein >= PROTEIN_TARGET;
+      const supp = d.supplements.length
+        ? `<div class="supp">+ ${d.supplements.map(s => s.name).join(" + ")} to reach ${PROTEIN_TARGET}g</div>` : "";
+      return `<div class="day">
+        <h3>${d.day}
+          <span class="macro ${ok ? "ok" : ""}">${d.protein}g protein · ${d.calories} kcal</span>
+        </h3>
+        ${slotHtml(i,"breakfast",d.meals.breakfast)}
+        ${slotHtml(i,"lunch",d.meals.lunch)}
+        ${slotHtml(i,"dinner",d.meals.dinner)}
+        ${supp}
+      </div>`;
+    }).join("");
+
+    // Shopping list
+    const counts = {};
+    week.forEach(d => ["breakfast","lunch","dinner"].forEach(s =>
+      (d.meals[s].ingredients || []).forEach(ing => { counts[ing.name] = (counts[ing.name] || 0) + 1; })));
+    const entries = Object.entries(counts).sort((a,b) => b[1]-a[1] || a[0].localeCompare(b[0]));
+    document.getElementById("shoppingCard").style.display = entries.length ? "block" : "none";
+    document.getElementById("shopping").innerHTML = entries.map(([name,n]) =>
+      `<span class="chip ${n>=2 ? "shared":""}">${name}${n>=2 ? `<span class="n">×${n}</span>`:""}</span>`).join("");
+
+    document.getElementById("status").textContent =
+      `${DATA.items.length} meals in dataset · ${loadPending().length} pending`;
+    renderPending();
+  }
+
+  function renderPending() {
+    const pend = loadPending();
+    const el = document.getElementById("pendingList");
+    if (!pend.length) { el.innerHTML = ""; return; }
+    el.innerHTML = `<h3 style="margin:16px 0 4px;font-size:15px">Pending items (${pend.length})</h3>` +
+      pend.map((p,i) => `<div class="pending-item">
+        <strong>${p.name}</strong> <span class="muted">[${(p.slots||[]).join(", ")}]</span>
+        <button class="ghost" style="float:right" onclick="app.removePending(${i})">remove</button>
+      </div>`).join("");
+  }
+
+  function addItem(e) {
+    e.preventDefault();
+    const name = document.getElementById("f-name").value.trim();
+    const slots = Array.from(document.querySelectorAll(".f-slot:checked")).map(c => c.value);
+    if (!name || !slots.length) { alert("Enter a name and at least one meal slot."); return; }
+    const ingredients = document.getElementById("f-ing").value
+      .split(",").map(s => s.trim().toLowerCase()).filter(Boolean).map(n => ({ name: n }));
+    const protRaw = document.getElementById("f-prot").value;
+    const item = {
+      id: name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"") + "-" + Date.now().toString(36),
+      name, slots, ingredients, tags: [],
+      serving: { amount: Number(document.getElementById("f-amt").value)||1, unit: document.getElementById("f-unit").value },
+      status: "pending"
+    };
+    if (protRaw !== "") item.est_protein = Number(protRaw);
+    const pend = loadPending(); pend.push(item); savePending(pend);
+    e.target.reset();
+    renderPending();
+    document.getElementById("status").textContent = `Added "${name}". Export + sync to add real nutrition.`;
+  }
+
+  function removePending(i) { const p = loadPending(); p.splice(i,1); savePending(p); renderPending(); }
+
+  function exportPending() {
+    const pend = loadPending();
+    const payload = { items: pend.map(p => ({
+      id: p.id, name: p.name, slots: p.slots, ingredients: p.ingredients, serving: p.serving, status: "pending"
+    })) };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "pending-items.json";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  const state = { week: null };
+  function save() { localStorage.setItem(LS_WEEK, JSON.stringify(state.week)); }
+  function load() { try { state.week = JSON.parse(localStorage.getItem(LS_WEEK)); } catch { state.week = null; } }
+
+  load(); render();
+
+  return { generate, swap, addItem, removePending, exportPending };
+})();
+</script>
+</body>
+</html>

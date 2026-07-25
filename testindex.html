@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weekly Meal Plan Generator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  h1 { color: #333; }
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  button:hover { background: #45a049; }
+  .day {
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Weekly Meal Plan Generator</h1>
+<p>Click the button to generate a weekly meal plan using your dataset.</p>
+
+<button onclick="generatePlan()">Generate Weekly Plan</button>
+
+<div id="output"></div>
+
+<script>
+// ------------------------------------------------------------
+// YOUR DATASET (cleaned + merged from your PDF extraction)
+// ------------------------------------------------------------
+const dataset = {
+  breakfasts: [
+    "yogurt + fruit", "Avocado + fruit", "Indian egg + cottage cheese",
+    "toast + butter + fruit", "Smoothie", "Scrambled eggs",
+    "Boiled Egg", "Yogurt + berries", "Oat bar + fruit",
+    "Pizza egg w/ tomato", "Savory broccoli cheddar waffles",
+    "Dhokla vagarela", "Almond butter toast"
+  ],
+  lunches: [
+    "Chickpea Pasta Salad", "Cheesy rice w/ veggies",
+    "Cream Cheese rolls + veggies", "Cheesy broccoli + naan",
+    "Pizza + veggies", "Panini Sandwich", "Risotto",
+    "Leftover Mexican Soup", "Quesadilla", "Mini Idli",
+    "Rice bowl (Mexican)", "Green Goddess Pasta",
+    "Butter chicken bake", "Paneer", "Tofu bowl"
+  ],
+  dinners: [
+    "Greek Meal", "Mexican bowl", "Potato + Quinoa",
+    "Shahi Paneer + Rotli", "Pav Bhaji", "BBQ burgers + poutine",
+    "Taco night", "Din Tai Fung", "Sing Tong",
+    "Chicken biryani", "Paneer borg", "Cauliflower enchilada",
+    "Veggies + mumra", "Shawarma", "Falafel"
+  ],
+  snacks: [
+    "Apple + PB", "Flaxseed + dip", "Muffin", "Fruits",
+    "Banana + PB", "Cheese crackers", "Cherry tomatoes",
+    "Makana", "Granola bar", "Cucumber slices", "Peppers"
+  ]
+};
+
+// ------------------------------------------------------------
+// GENERATOR LOGIC
+// ------------------------------------------------------------
+function pick(list) {
+  return list[Math.floor(Math.random() * list.length)];
+}
+
+function generatePlan() {
+  const days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+  let html = "";
+
+  days.forEach(day => {
+    html += `
+      <div class="day">
+        <div class="title">${day}</div>
+        <div><strong>Breakfast:</strong> ${pick(dataset.breakfasts)}</div>
+        <div><strong>Lunch:</strong> ${pick(dataset.lunches)}</div>
+        <div><strong>Dinner:</strong> ${pick(dataset.dinners)}</div>
+        <div><strong>Snacks:</strong> ${pick(dataset.snacks)}, ${pick(dataset.snacks)}</div>
+      </div>
+    `;
+  });
+
+  document.getElementById("output").innerHTML = html;
+}
+</script>
+
+</body>
+</html>

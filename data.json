@@ -1,0 +1,406 @@
+{
+  "sections": [
+    {
+      "section_id": 1,
+      "salad": "Chickpea / Feta Salad, Romaine",
+      "recipes": {
+        "chia_pudding": {
+          "ingredients": [
+            "1 cup milk",
+            "2 tbsp maple syrup",
+            "3-4 dates pitted",
+            "2 tbsp coca powder",
+            "2 /2 Hosp Chia seeds"
+          ],
+          "instructions": [
+            "Blend all ingredients",
+            "Pour into small containers",
+            "Place in refrigerator overnight"
+          ]
+        }
+      },
+      "weekly_plan": {
+        "monday": {
+          "breakfast": "yogurt + fruit",
+          "lunch_dinner": "Chickpea Pasta Salad Rajna/Rice"
+        },
+        "tuesday": {
+          "breakfast": "Avocado (tvac)+ Fruit",
+          "lunch_dinner": "Cheesy rice w/veggies Asian Stir fry Noodles"
+        },
+        "wednesday": {
+          "breakfast": "Indian egg w Cottage Cheese + fruit",
+          "lunch_dinner": "Cream Cheese rolls + veggies or fruit Chanadal+ rotli"
+        },
+        "thursday": {
+          "breakfast": "toast + butter + fruit",
+          "lunch_dinner": "Cheesy broccoli Chicken curryt Naan + Rice."
+        },
+        "friday": {
+          "breakfast": "Smoothie?",
+          "lunch_dinner": "Pizza trast Burgers + Friest veggies."
+        }
+      }
+    },
+
+    {
+      "section_id": 2,
+      "weekly_plan": {
+        "monday": ["gymnastics"],
+        "tuesday": ["omelette"],
+        "wednesday": ["library"],
+        "thursday": ["yogurt + fruit", "Cottage Cheese", "toast", "Almond butter toast + fruit"],
+        "friday": ["Smoothie"]
+      },
+      "meals_misc": [
+        "Pasta Salad",
+        "4/ Mayo",
+        "Risotto",
+        "Grilled Zuchinni",
+        "Panini Sandwich",
+        "Butter garlic Steamed veggies",
+        "Egg Curry",
+        "Chicken bake",
+        "Pasta",
+        "Garlic Parm Chicken Pasta",
+        "Bataka/Eggplant rotti/Rice",
+        "Quesidella beans/chicken",
+        "Biryani"
+      ],
+      "recipes": {
+        "mango_smoothie": [
+          "M Mango",
+          "1 cop mango milk",
+          "1 scoop vanilla Bando",
+          "1 those Chia seed"
+        ]
+      },
+      "activities": [
+        "Buble Foam",
+        "Jello pander",
+        "pool noodle threading",
+        "paint Colour matching card",
+        "Baking SodaJuneger / Colouring ing"
+      ]
+    },
+
+    {
+      "section_id": 3,
+      "salad": "Greek, Coleslaw",
+      "weekly_plan": {
+        "friday": ["B: Scrambled Egg", "Day Off"],
+        "monday": [],
+        "tuesday": [],
+        "wednesday": [],
+        "thursday": []
+      },
+      "tasks": {
+        "plan_meals": true,
+        "plan_activities": true,
+        "relax_recharge": true
+      },
+      "meals": {
+        "breakfast": [
+          "Dhokla vagarela",
+          "Boiled Eggs - whole",
+          "Boiled Eggs",
+          "B Baled Egg yogurt"
+        ],
+        "snacks": [
+          "Flaxseed + Dip",
+          "Muffin",
+          "Fruits",
+          "Apple+PB",
+          "tomato + cucumber"
+        ],
+        "lunch": [
+          "Leftover Mexican Soup+Something",
+          "Leftover or Burger",
+          "Leftover or Sandwich",
+          "Leftover"
+        ],
+        "dinner": [
+          "Greek Meal",
+          "Mexican @ 6pm",
+          "Potato, Quinoa",
+          "Green Goddess",
+          "Rama/Rice RONI",
+          "Shahi / Butter Paneer / Rotli",
+          "PavBhaji + cauliflower in freezer"
+        ]
+      },
+      "todo": ["oat bars - soft bake"],
+      "weekend_plans": ["bake oat bars", "empty freezer"]
+    },
+
+    {
+      "section_id": 4,
+      "collected_items": ["Chopped", "Coleslaw - Dressing"],
+      "todo": [
+        "Costco-cheese",
+        "Avocado",
+        "Whipping Cream",
+        "Cherry tomato",
+        "little encumber",
+        "cream cheese",
+        "Eggs",
+        "Garlic Powder",
+        "Hummus",
+        "Mung Baht",
+        "Sponges"
+      ],
+      "events": ["Kevin/Tara's Place", "Superbowl@home"],
+      "menu": ["Nacho", "chopped Coleslaw", "Sliders", "Dip"],
+      "weekly_plan_table": {
+        "monday": {
+          "breakfast": "Boiled Egg yogurt",
+          "snack": "Muffin",
+          "activities": ["Cork/water"],
+          "lunch": "Leftovers med",
+          "snack2": "Banana/Apple bite w/ Peanut Butter",
+          "dinner": "Paneer bug"
+        },
+        "tuesday": {
+          "breakfast": "Scrambled Egg Cheese",
+          "snack": "tomato cherry +",
+          "activities": ["Shape Sorter"],
+          "lunch": "Left over",
+          "snack2": "Cheese Cracker",
+          "dinner": "Taco bour"
+        },
+        "wednesday": {
+          "breakfast": "dags try again",
+          "snack": "Muffin",
+          "activities": ["Shape Sorter"],
+          "lunch": "Sandwich Hourger Masala Dats",
+          "snack2": "Banana W/PP Hummus+ Cracker, flaxseed",
+          "dinner": "Barthol+ Coleslaw leftovers"
+        },
+        "thursday": {
+          "breakfast": "Boiled Egg waffe",
+          "snack": "Mumra",
+          "activities": [],
+          "lunch": "",
+          "snack2": "Masalalife Oats dual",
+          "dinner": "Barthol Coleslaw"
+        },
+        "friday": {
+          "breakfast": "Scrambled eggs bold",
+          "activities": ["walk-outdoor"],
+          "lunch": "Leftover",
+          "snack2": "Kke or dal",
+          "dinner": "2"
+        }
+      }
+    },
+
+    {
+      "section_id": 5,
+      "salad": "Coleslaw",
+      "weekly_plan": {
+        "monday": [],
+        "tuesday": [],
+        "wednesday": [],
+        "thursday": [],
+        "friday": []
+      },
+      "activities": ["Pike Place", "Aquarium", "parks"],
+      "meals": [
+        "lentil Salad",
+        "pasta bake",
+        "Taco",
+        "burgers + poutine",
+        "pag",
+        "Din Ti",
+        "Maharaja",
+        "Sing tong",
+        "Pani puri",
+        "blended ginger",
+        "Sharwma",
+        "Scrambled eggs",
+        "BBQ- harabara Kebab",
+        "Carrots",
+        "Red Cabbage",
+        "fresh party Greek yogurt",
+        "tomatos",
+        "Unions (White/Red)",
+        "Ground Chicken",
+        "cottage cheese",
+        "cheese board Pad thai"
+      ],
+      "weekend_items": [
+        "mini idli + Dambor bread",
+        "Rice bowl? Mexican",
+        "baby carrots",
+        "Pani Puri?",
+        "banana",
+        "Green Goddess Pasta",
+        "pasta (boiled)",
+        "Butter chicken Bake / Paneer",
+        "Guac",
+        "Pasta bake?",
+        "Chicken/Broccoli nuggets Puffs",
+        "tofu Bow2 + Chi Ili Panier"
+      ]
+    },
+
+    {
+      "section_id": 6,
+      "weekly_plan": {
+        "monday": "Scrambled eggs",
+        "tuesday": "yogurt + fruit",
+        "wednesday": "oat bar / fruit, omelette",
+        "thursday": "Guac + frust",
+        "friday": "Yogurt"
+      },
+      "meal_options": [
+        "Sandwich",
+        "Salad",
+        "Leftovers",
+        "burgers",
+        "soup",
+        "Quinoa Broccoli",
+        "Pulha",
+        "Mini Idli",
+        "Pasta",
+        "Steamed Veggies",
+        "thiki bakri w cottage cheese",
+        "Kitchdi",
+        "Chutney recipes",
+        "Pasta",
+        "Shawarma",
+        "faletel",
+        "tofu bowl",
+        "Din ti Fung",
+        "Pani puri",
+        "Sing tong",
+        "Taco",
+        "Rice bowl",
+        "BBQ",
+        "burgers + poutine",
+        "Pan-Pizza"
+      ]
+    },
+
+    {
+      "section_id": 7,
+      "weekly_plan": {
+        "tuesday": ["yogurt w/ fruit", "Smoothie"],
+        "wednesday": ["Boiled eggs tossed in spices"],
+        "thursday": ["pizza egg w/ tomato"],
+        "friday": ["Savory brocolil Chedden waffles w/eggs"]
+      },
+      "meals": [
+        "Indian Scramble",
+        "Vagareli",
+        "Segui puta theplay",
+        "whatagecheze vananeli Botti",
+        "veggies + mumra",
+        "Quinoa Lorocioli",
+        "Chicken biryani",
+        "lali Sambor",
+        "Erano Quesadilla",
+        "Paneer borg",
+        "Cauliflower Esenchilada",
+        "Snack / Rotli toate",
+        "moong Peace"
+      ],
+      "shopping_list": ["eggs", "Avocado", "Salad options", "bromaine letterve?"],
+      "weekend_plans": [
+        "Large or Small circle",
+        "water activity",
+        "walk",
+        "library",
+        "little gym - Find right lid Gillwater bay",
+        "paint",
+        "corresponding item to cord",
+        "Colour Sorting",
+        "Emotion Card"
+      ]
+    },
+
+    {
+      "section_id": 8,
+      "weekly_plan": {
+        "monday": {
+          "breakfast": "Yogurt / berries",
+          "play": "Indep. Play",
+          "snack": "Apple + PB"
+        },
+        "tuesday": {
+          "breakfast": "Boiled Egg",
+          "play": "Indep. Play"
+        },
+        "wednesday": {
+          "breakfast": "Boiled Egg",
+          "play": "Indep Play"
+        },
+        "friday": {
+          "breakfast": "Yogurt + bread",
+          "play": "Indep. Play"
+        }
+      },
+      "activities": ["Shape Sorter + wall Sticky"],
+      "lunch": ["Ques"],
+      "snacks": ["tomato + cream"],
+      "dinner": ["RajmalRice"]
+    },
+
+    {
+      "section_id": 9,
+      "weekly_plan": {
+        "monday": "Boiled Egg",
+        "tuesday": "Omlete",
+        "wednesday": "Boiled Egg",
+        "friday": "Sandwich/SOUP"
+      },
+      "lunch": ["Vagareli Idli"],
+      "dinner": [
+        "Pasta Belange",
+        "Rice/Dal (freeza)",
+        "Idli/Sambar",
+        "Mexican rice/guac/beans/PICO",
+        "Nacho",
+        "Binda Kadhi"
+      ],
+      "todo": ["Guac", "Sour Cream", "Yogurt", "Quesidia"],
+      "weekend_plans": ["make 8000 ultr", "cooking", "don"]
+    },
+
+    {
+      "section_id": 10,
+      "weekly_plan": {
+        "monday": "Avocado (Guac) fruit",
+        "tuesday": "Yogurt / fruit",
+        "wednesday": "toast + Almond butter + fruit",
+        "thursday": "Indian omelette + cottage cheese + fruit",
+        "friday": "Yogurt + fruit"
+      },
+      "meals": [
+        "Bataka/Poha",
+        "Left over Chicken curry + onion Tonside",
+        "Steamed veggies egg bites",
+        "Chanadal + Rotli + Rice + Cucumber raita onion/tomato",
+        "Brocc. Quinoa. Rice Mexican Bowl.",
+        "Cream Cheese rolls + carrots",
+        "BBQ or Din TiFung",
+        "left over (fia)",
+        "out Tacos",
+        "Anything"
+      ],
+      "snacks": [
+        "Nuts",
+        "potato Small broc",
+        "Makana",
+        "onions chicken",
+        "Cherry tomato",
+        "garlic",
+        "cucumber slices",
+        "peppers",
+        "bars out/granola",
+        "tomato",
+        "lettere"
+      ]
+    }
+  ]
+}
