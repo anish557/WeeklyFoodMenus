@@ -12,7 +12,7 @@ Covers your original **Step 5**: a static app that generates a weekly menu, allo
 - App **reads** `data/menu-data.json`; it does **not** call USDA directly.
 
 ## Outputs
-- `web/index.html`, `web/app.js`, `web/styles.css`.
+- `index.html` (at repo root) reading `web/menu-data.js`.
 - Generator + constraint logic in `app.js`.
 - Wiring so "Add item" appends to an in-app list persisted to `localStorage`, exportable to `data/pending-items.json`.
 
