@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-25T10:13:19.816Z",
+  "generatedAt": "2026-07-25T10:32:36.858Z",
   "supplements": [
     {
       "id": "supp-fairlife",
@@ -44,13 +44,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 12,
-        "calories": 329,
+        "protein_g": 16,
+        "calories": 164,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 167722
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -79,13 +79,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 33,
-        "calories": 259,
+        "protein_g": 8,
+        "calories": 157,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2705751
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -116,12 +116,12 @@
       ],
       "nutrition": {
         "protein_g": 8,
-        "calories": 900,
+        "calories": 343,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2710208
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -151,13 +151,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 900,
+        "protein_g": 10,
+        "calories": 334,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707533
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -187,13 +187,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 900,
+        "protein_g": 6,
+        "calories": 321,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707702
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -221,13 +221,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 14,
-        "calories": 376,
+        "protein_g": 21,
+        "calories": 251,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 167722
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -252,13 +252,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 12,
-        "calories": 143,
+        "protein_g": 13,
+        "calories": 155,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707154
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -289,13 +289,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 12,
-        "calories": 143,
+        "protein_g": 13,
+        "calories": 161,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707154
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -323,13 +323,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 45,
-        "calories": 572,
+        "protein_g": 28,
+        "calories": 247,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707154
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -357,13 +357,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 45,
-        "calories": 572,
+        "protein_g": 18,
+        "calories": 358,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707154
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -391,13 +391,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 10,
-        "calories": 149,
+        "protein_g": 13,
+        "calories": 245,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 172187
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -425,13 +425,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 10,
-        "calories": 149,
+        "protein_g": 20,
+        "calories": 278,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 172187
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -462,12 +462,12 @@
         }
       ],
       "nutrition": {
-        "protein_g": 25,
-        "calories": 400,
+        "protein_g": 20,
+        "calories": 293,
         "carbs_g": null,
         "fat_g": null,
-        "source": "ai-estimate",
-        "confidence": "low",
+        "source": "usda-ingredients",
+        "confidence": "medium",
         "fdcId": null
       }
     },
@@ -505,12 +505,12 @@
         }
       ],
       "nutrition": {
-        "protein_g": 25,
-        "calories": 400,
+        "protein_g": 14,
+        "calories": 184,
         "carbs_g": null,
         "fat_g": null,
-        "source": "ai-estimate",
-        "confidence": "low",
+        "source": "usda-ingredients",
+        "confidence": "medium",
         "fdcId": null
       }
     },
@@ -550,13 +550,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 14,
-        "calories": 576,
+        "protein_g": 22,
+        "calories": 340,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2705686
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -586,13 +586,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 45,
-        "calories": 900,
+        "protein_g": 20,
+        "calories": 290,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708699
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -625,13 +625,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 4,
-        "calories": 192,
+        "protein_g": 27,
+        "calories": 433,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 170989
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -664,12 +664,12 @@
         }
       ],
       "nutrition": {
-        "protein_g": 10,
-        "calories": 400,
+        "protein_g": 25,
+        "calories": 258,
         "carbs_g": null,
         "fat_g": null,
-        "source": "ai-estimate",
-        "confidence": "low",
+        "source": "usda-ingredients",
+        "confidence": "medium",
         "fdcId": null
       }
     },
@@ -706,13 +706,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 7,
-        "calories": 186,
+        "protein_g": 12,
+        "calories": 500,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 173043
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -744,12 +744,12 @@
       ],
       "nutrition": {
         "protein_g": 6,
-        "calories": 278,
+        "calories": 269,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 169063
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -786,13 +786,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 5,
-        "calories": 341,
+        "protein_g": 11,
+        "calories": 326,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2705679
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -827,13 +827,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 22,
-        "calories": 258,
+        "protein_g": 31,
+        "calories": 379,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2710147
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -862,13 +862,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 900,
+        "protein_g": 14,
+        "calories": 322,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708171
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -898,13 +898,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 900,
+        "protein_g": 14,
+        "calories": 322,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708171
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -931,12 +931,12 @@
         }
       ],
       "nutrition": {
-        "protein_g": 10,
-        "calories": 400,
+        "protein_g": 4,
+        "calories": 85,
         "carbs_g": null,
         "fat_g": null,
-        "source": "ai-estimate",
-        "confidence": "low",
+        "source": "usda-ingredients",
+        "confidence": "medium",
         "fdcId": null
       }
     },
@@ -971,13 +971,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 872,
+        "protein_g": 13,
+        "calories": 245,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708507
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1005,13 +1005,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 614,
+        "protein_g": 8,
+        "calories": 252,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708346
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1041,13 +1041,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 512,
+        "protein_g": 5,
+        "calories": 191,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708346
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1088,13 +1088,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 24,
-        "calories": 861,
+        "protein_g": 36,
+        "calories": 693,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708947
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1132,13 +1132,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 13,
-        "calories": 389,
+        "protein_g": 15,
+        "calories": 296,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707431
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1172,13 +1172,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 12,
-        "calories": 230,
+        "protein_g": 59,
+        "calories": 634,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708593
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1209,13 +1209,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 567,
+        "protein_g": 7,
+        "calories": 298,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707660
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1255,12 +1255,12 @@
         }
       ],
       "nutrition": {
-        "protein_g": 25,
-        "calories": 400,
+        "protein_g": 17,
+        "calories": 391,
         "carbs_g": null,
         "fat_g": null,
-        "source": "ai-estimate",
-        "confidence": "low",
+        "source": "usda-ingredients",
+        "confidence": "medium",
         "fdcId": null
       }
     },
@@ -1295,13 +1295,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 34,
-        "calories": 580,
+        "protein_g": 16,
+        "calories": 387,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707427
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1333,13 +1333,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 448,
+        "protein_g": 15,
+        "calories": 426,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2709078
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1370,12 +1370,12 @@
         }
       ],
       "nutrition": {
-        "protein_g": 10,
-        "calories": 400,
+        "protein_g": 14,
+        "calories": 374,
         "carbs_g": null,
         "fat_g": null,
-        "source": "ai-estimate",
-        "confidence": "low",
+        "source": "usda-ingredients",
+        "confidence": "medium",
         "fdcId": null
       }
     },
@@ -1411,13 +1411,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 15,
-        "calories": 307,
+        "protein_g": 23,
+        "calories": 527,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708346
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1449,12 +1449,12 @@
         }
       ],
       "nutrition": {
-        "protein_g": 10,
-        "calories": 400,
+        "protein_g": 29,
+        "calories": 443,
         "carbs_g": null,
         "fat_g": null,
-        "source": "ai-estimate",
-        "confidence": "low",
+        "source": "usda-ingredients",
+        "confidence": "medium",
         "fdcId": null
       }
     },
@@ -1494,11 +1494,11 @@
       ],
       "nutrition": {
         "protein_g": 10,
-        "calories": 400,
+        "calories": 464,
         "carbs_g": null,
         "fat_g": null,
-        "source": "ai-estimate",
-        "confidence": "low",
+        "source": "usda-ingredients",
+        "confidence": "medium",
         "fdcId": null
       }
     },
@@ -1529,13 +1529,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 19,
-        "calories": 417,
+        "protein_g": 9,
+        "calories": 230,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707400
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1562,13 +1562,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 5,
-        "calories": 190,
+        "protein_g": 14,
+        "calories": 314,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 170883
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1604,12 +1604,12 @@
         }
       ],
       "nutrition": {
-        "protein_g": 25,
-        "calories": 400,
+        "protein_g": 19,
+        "calories": 461,
         "carbs_g": null,
         "fat_g": null,
-        "source": "ai-estimate",
-        "confidence": "low",
+        "source": "usda-ingredients",
+        "confidence": "medium",
         "fdcId": null
       }
     },
@@ -1640,13 +1640,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 12,
-        "calories": 222,
+        "protein_g": 22,
+        "calories": 448,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2709631
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1685,13 +1685,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 272,
+        "protein_g": 11,
+        "calories": 474,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2709633
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1723,13 +1723,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 900,
+        "protein_g": 6,
+        "calories": 223,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 171524
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1759,13 +1759,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 8,
-        "calories": 112,
+        "protein_g": 6,
+        "calories": 217,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 172284
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1800,13 +1800,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 29,
-        "calories": 416,
+        "protein_g": 56,
+        "calories": 456,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2706538
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1848,13 +1848,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 26,
-        "calories": 428,
+        "protein_g": 49,
+        "calories": 643,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2706437
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1886,13 +1886,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 45,
-        "calories": 900,
+        "protein_g": 38,
+        "calories": 402,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2706069
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1928,13 +1928,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 30,
-        "calories": 452,
+        "protein_g": 14,
+        "calories": 195,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2706388
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -1967,13 +1967,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 900,
+        "protein_g": 15,
+        "calories": 572,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707714
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2006,12 +2006,12 @@
         }
       ],
       "nutrition": {
-        "protein_g": 10,
-        "calories": 400,
+        "protein_g": 21,
+        "calories": 539,
         "carbs_g": null,
         "fat_g": null,
-        "source": "ai-estimate",
-        "confidence": "low",
+        "source": "usda-ingredients",
+        "confidence": "medium",
         "fdcId": null
       }
     },
@@ -2041,13 +2041,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 4,
-        "calories": 449,
+        "protein_g": 18,
+        "calories": 472,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708008
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2076,13 +2076,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 616,
+        "protein_g": 18,
+        "calories": 472,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 172041
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2109,13 +2109,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 550,
+        "protein_g": 9,
+        "calories": 245,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708357
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2145,13 +2145,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 18,
-        "calories": 420,
+        "protein_g": 16,
+        "calories": 368,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707390
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2180,13 +2180,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 550,
+        "protein_g": 35,
+        "calories": 570,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708357
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2221,13 +2221,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 45,
-        "calories": 714,
+        "protein_g": 52,
+        "calories": 593,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 168062
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2262,13 +2262,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 7,
-        "calories": 900,
+        "protein_g": 25,
+        "calories": 330,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 169057
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2300,13 +2300,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 18,
-        "calories": 581,
+        "protein_g": 10,
+        "calories": 244,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2709094
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2336,12 +2336,12 @@
         }
       ],
       "nutrition": {
-        "protein_g": 25,
-        "calories": 400,
+        "protein_g": 46,
+        "calories": 361,
         "carbs_g": null,
         "fat_g": null,
-        "source": "ai-estimate",
-        "confidence": "low",
+        "source": "usda-ingredients",
+        "confidence": "medium",
         "fdcId": null
       }
     },
@@ -2372,13 +2372,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 45,
-        "calories": 787,
+        "protein_g": 43,
+        "calories": 300,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2706087
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2410,13 +2410,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 29,
-        "calories": 493,
+        "protein_g": 36,
+        "calories": 595,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707481
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2451,13 +2451,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 29,
-        "calories": 493,
+        "protein_g": 45,
+        "calories": 728,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707481
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2487,13 +2487,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 18,
-        "calories": 392,
+        "protein_g": 13,
+        "calories": 332,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2709078
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2520,13 +2520,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 15,
-        "calories": 781,
+        "protein_g": 10,
+        "calories": 145,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2709656
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2557,13 +2557,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 228,
+        "protein_g": 3,
+        "calories": 164,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2706353
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2594,13 +2594,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 18,
-        "calories": 900,
+        "protein_g": 2,
+        "calories": 114,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707851
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2626,13 +2626,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 14,
-        "calories": 599,
+        "protein_g": 8,
+        "calories": 319,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2709510
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2661,13 +2661,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 15,
-        "calories": 420,
+        "protein_g": 10,
+        "calories": 191,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 168917
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2697,13 +2697,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 900,
+        "protein_g": 11,
+        "calories": 364,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 173347
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2738,13 +2738,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 13,
-        "calories": 340,
+        "protein_g": 48,
+        "calories": 650,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 170736
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2781,13 +2781,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 12,
-        "calories": 683,
+        "protein_g": 22,
+        "calories": 494,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 169031
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2819,13 +2819,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 900,
+        "protein_g": 21,
+        "calories": 492,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708580
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2857,13 +2857,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 16,
-        "calories": 306,
+        "protein_g": 14,
+        "calories": 334,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708566
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2898,13 +2898,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 37,
-        "calories": 900,
+        "protein_g": 45,
+        "calories": 419,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 172750
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -2937,12 +2937,12 @@
         }
       ],
       "nutrition": {
-        "protein_g": 25,
-        "calories": 400,
+        "protein_g": 45,
+        "calories": 463,
         "carbs_g": null,
         "fat_g": null,
-        "source": "ai-estimate",
-        "confidence": "low",
+        "source": "usda-ingredients",
+        "confidence": "medium",
         "fdcId": null
       }
     },
@@ -2977,13 +2977,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 26,
-        "calories": 900,
+        "protein_g": 16,
+        "calories": 428,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2707408
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -3017,13 +3017,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 7,
-        "calories": 249,
+        "protein_g": 10,
+        "calories": 271,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2710036
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -3058,13 +3058,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 28,
-        "calories": 539,
+        "protein_g": 32,
+        "calories": 515,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708806
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -3097,13 +3097,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 12,
-        "calories": 329,
+        "protein_g": 26,
+        "calories": 324,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 167722
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -3129,13 +3129,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 2,
-        "calories": 715,
+        "protein_g": 10,
+        "calories": 221,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2710677
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -3166,13 +3166,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 20,
-        "calories": 543,
+        "protein_g": 16,
+        "calories": 367,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2708561
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -3211,12 +3211,12 @@
         }
       ],
       "nutrition": {
-        "protein_g": 25,
-        "calories": 400,
+        "protein_g": 11,
+        "calories": 192,
         "carbs_g": null,
         "fat_g": null,
-        "source": "ai-estimate",
-        "confidence": "low",
+        "source": "usda-ingredients",
+        "confidence": "medium",
         "fdcId": null
       }
     },
@@ -3259,13 +3259,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 10,
-        "calories": 168,
+        "protein_g": 54,
+        "calories": 594,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2709830
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -3301,13 +3301,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 3,
-        "calories": 410,
+        "protein_g": 39,
+        "calories": 342,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2709815
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     },
     {
@@ -3337,13 +3337,13 @@
         }
       ],
       "nutrition": {
-        "protein_g": 4,
-        "calories": 296,
+        "protein_g": 15,
+        "calories": 275,
         "carbs_g": null,
         "fat_g": null,
-        "source": "usda-fdc",
-        "confidence": "low",
-        "fdcId": 2709744
+        "source": "usda-ingredients",
+        "confidence": "medium",
+        "fdcId": null
       }
     }
   ]

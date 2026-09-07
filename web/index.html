@@ -49,16 +49,30 @@
   .slotbox input { width:auto; }
   .pending-item { font-size:14px; padding:6px 0; border-top:1px solid var(--line); }
   .muted { color:var(--muted); font-size:13px; }
+  .slot select.pick { font-weight:600; padding:5px 6px; border:1px solid #ddd; border-radius:5px; max-width:210px; background:#fff; }
+  .slot .tags { margin-top:4px; }
+  .toolbar label.setting { font-size:14px; color:#444; display:flex; align-items:center; gap:6px; }
+  .toolbar select { padding:6px 8px; border-radius:5px; border:1px solid #ccc; font-size:14px; }
+  .toolbar input[type=number] { padding:6px; border-radius:5px; border:1px solid #ccc; }
 </style>
 </head>
 <body>
 
 <h1>Weekly Meal Plan Generator</h1>
-<p class="sub">Constraint-aware: aims for <strong>≥70g protein/day</strong> (tops up with your Fairlife shake / Greek yogurt),
-avoids repeats, keeps restaurants apart, prefers simple lunches. Nutrition is rough (USDA, offline). No network calls.</p>
+<p class="sub">Constraint-aware: hits your <strong>daily protein target</strong> (tops up with your Fairlife shake / Greek yogurt, or choose <em>No constraint</em>),
+avoids repeats, keeps restaurants apart, prefers simple lunches. Pick any meal from the dropdowns. Nutrition is estimated (USDA, offline). No network calls.</p>
 
 <div class="toolbar">
   <button onclick="app.generate()">Generate Weekly Plan</button>
+  <label class="setting">Protein target:
+    <select id="proteinMode" onchange="app.setProteinMode(this.value)">
+      <option value="none">No constraint</option>
+      <option value="70">70 g/day</option>
+      <option value="100">100 g/day</option>
+      <option value="custom">Custom…</option>
+    </select>
+  </label>
+  <input id="proteinCustom" type="number" min="0" step="5" placeholder="g/day" style="width:90px;display:none" oninput="app.setCustom(this.value)" />
   <span class="muted" id="status"></span>
 </div>
 
@@ -106,8 +120,20 @@ avoids repeats, keeps restaurants apart, prefers simple lunches. Nutrition is ro
 <script>
 const app = (() => {
   const DAYS = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-  const PROTEIN_TARGET = 70;
-  const LS_WEEK = "wfm_week", LS_PENDING = "wfm_pending";
+  const LS_WEEK = "wfm_week", LS_PENDING = "wfm_pending", LS_SETTINGS = "wfm_settings";
+
+  // Protein-target setting (persisted). Mode: "none" | "70" | "100" | "custom".
+  function loadSettings() {
+    try { return Object.assign({ proteinMode: "70", proteinCustom: 90 }, JSON.parse(localStorage.getItem(LS_SETTINGS)) || {}); }
+    catch { return { proteinMode: "70", proteinCustom: 90 }; }
+  }
+  const settings = loadSettings();
+  function saveSettings() { localStorage.setItem(LS_SETTINGS, JSON.stringify(settings)); }
+  function target() {
+    if (settings.proteinMode === "none") return null;
+    if (settings.proteinMode === "custom") return Number(settings.proteinCustom) || 0;
+    return Number(settings.proteinMode);
+  }
 
   const DATA = window.MENU_DATA || { items: [], supplements: [] };
   const SUPP = DATA.supplements || [];
@@ -146,16 +172,17 @@ const app = (() => {
   function computeDay(meals) {
     let protein = meals.reduce((s, m) => s + (m.nutrition?.protein_g || 0), 0);
     let calories = meals.reduce((s, m) => s + (m.nutrition?.calories || 0), 0);
+    const T = target();
     const supplements = [];
     let guard = 0;
-    while (protein < PROTEIN_TARGET && guard < 5) {
-      const add = (PROTEIN_TARGET - protein) >= 20 ? SHAKE : YOG;
+    while (T && protein < T && guard < 8) {
+      const add = (T - protein) >= 20 ? SHAKE : YOG;
       supplements.push(add);
       protein += add.protein_g;
       calories += add.calories;
       guard++;
     }
-    return { protein, calories, supplements };
+    return { protein, calories, supplements, target: T };
   }
 
   function generate() {
@@ -195,17 +222,24 @@ const app = (() => {
     if (has(m, "eat-out") || has(m, "backup")) b += '<span class="pill eat">restaurant</span>';
     if (has(m, "advance-prep")) b += '<span class="pill prep">prep 2 days ahead</span>';
     if (m._pending) b += '<span class="pill sync">needs sync</span>';
-    else if (m.nutrition?.source !== "usda-fdc") b += '<span class="pill rough">rough est.</span>';
+    else if (m.nutrition?.confidence === "low" || m.nutrition?.source === "ai-estimate") b += '<span class="pill rough">approx</span>';
     return b;
   }
 
+  function optionsFor(slot) {
+    return pool().filter(it => (it.slots || []).includes(slot)).sort((a, b) => a.name.localeCompare(b.name));
+  }
+
   function slotHtml(dayIndex, slot, m) {
+    const opts = optionsFor(slot).map(o =>
+      `<option value="${o.id}"${o.id === m.id ? " selected" : ""}>${o.name} — ${o.nutrition?.protein_g ?? "?"}g</option>`).join("");
     return `<div class="slot">
       <div class="lbl">${slot}</div>
       <div class="row">
-        <div class="name">${m.name}${badges(m)}</div>
-        <div class="p">${m.nutrition?.protein_g ?? "?"}g · <button class="ghost" onclick="app.swap(${dayIndex},'${slot}')">swap</button></div>
+        <select class="pick" onchange="app.setMeal(${dayIndex},'${slot}',this.value)">${opts}</select>
+        <div class="p">${m.nutrition?.protein_g ?? "?"}g <button class="ghost" onclick="app.swap(${dayIndex},'${slot}')" title="random swap">↻</button></div>
       </div>
+      <div class="tags">${badges(m)}</div>
     </div>`;
   }
 
@@ -214,9 +248,9 @@ const app = (() => {
     const wrap = document.getElementById("week");
     if (!week) { wrap.innerHTML = ""; return; }
     wrap.innerHTML = week.map((d, i) => {
-      const ok = d.protein >= PROTEIN_TARGET;
+      const ok = d.target ? d.protein >= d.target : false;
       const supp = d.supplements.length
-        ? `<div class="supp">+ ${d.supplements.map(s => s.name).join(" + ")} to reach ${PROTEIN_TARGET}g</div>` : "";
+        ? `<div class="supp">+ ${d.supplements.map(s => s.name).join(" + ")} to reach ${d.target}g</div>` : "";
       return `<div class="day">
         <h3>${d.day}
           <span class="macro ${ok ? "ok" : ""}">${d.protein}g protein · ${d.calories} kcal</span>
@@ -289,13 +323,47 @@ const app = (() => {
     URL.revokeObjectURL(a.href);
   }
 
+  function recomputeAll() {
+    if (!state.week) return;
+    state.week.forEach(d => Object.assign(d, computeDay(Object.values(d.meals))));
+  }
+
+  function setMeal(dayIndex, slot, id) {
+    const m = pool().find(x => x.id === id);
+    if (!m) return;
+    state.week[dayIndex].meals[slot] = m;
+    const d = state.week[dayIndex];
+    Object.assign(d, computeDay(Object.values(d.meals)));
+    save(); render();
+  }
+
+  function setProteinMode(v) {
+    settings.proteinMode = v;
+    const cust = document.getElementById("proteinCustom");
+    if (cust) cust.style.display = v === "custom" ? "inline-block" : "none";
+    saveSettings(); recomputeAll(); save(); render();
+  }
+
+  function setCustom(v) {
+    settings.proteinCustom = v;
+    saveSettings(); recomputeAll(); save(); render();
+  }
+
   const state = { week: null };
   function save() { localStorage.setItem(LS_WEEK, JSON.stringify(state.week)); }
   function load() { try { state.week = JSON.parse(localStorage.getItem(LS_WEEK)); } catch { state.week = null; } }
 
-  load(); render();
+  load();
+  (function initControls() {
+    const sel = document.getElementById("proteinMode");
+    const cust = document.getElementById("proteinCustom");
+    if (sel) sel.value = settings.proteinMode;
+    if (cust) { cust.value = settings.proteinCustom; cust.style.display = settings.proteinMode === "custom" ? "inline-block" : "none"; }
+  })();
+  recomputeAll();
+  render();
 
-  return { generate, swap, addItem, removePending, exportPending };
+  return { generate, swap, addItem, removePending, exportPending, setMeal, setProteinMode, setCustom };
 })();
 </script>
 </body>

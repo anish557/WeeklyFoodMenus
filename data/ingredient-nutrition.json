@@ -1,0 +1,668 @@
+{
+  "almond butter": {
+    "protein_per100": 20.7,
+    "kcal_per100": 641,
+    "source": "usda-fdc",
+    "fdcId": 2707533
+  },
+  "arborio rice": {
+    "protein_per100": 2,
+    "kcal_per100": 96,
+    "source": "usda-fdc",
+    "fdcId": 2708422
+  },
+  "avocado": {
+    "protein_per100": 2,
+    "kcal_per100": 160,
+    "source": "curated",
+    "fdcId": null
+  },
+  "basil": {
+    "protein_per100": 3,
+    "kcal_per100": 23,
+    "source": "curated",
+    "fdcId": null
+  },
+  "basmati rice": {
+    "protein_per100": 2,
+    "kcal_per100": 96,
+    "source": "usda-fdc",
+    "fdcId": 2708422
+  },
+  "bean sprouts": {
+    "protein_per100": 3,
+    "kcal_per100": 30,
+    "source": "curated",
+    "fdcId": null
+  },
+  "beans": {
+    "protein_per100": 8.9,
+    "kcal_per100": 132,
+    "source": "usda-fdc",
+    "fdcId": 175237
+  },
+  "bell pepper": {
+    "protein_per100": 0.7,
+    "kcal_per100": 43,
+    "source": "usda-fdc",
+    "fdcId": 2710094
+  },
+  "bread": {
+    "protein_per100": 9,
+    "kcal_per100": 265,
+    "source": "curated",
+    "fdcId": null
+  },
+  "breadcrumbs": {
+    "protein_per100": 13,
+    "kcal_per100": 395,
+    "source": "curated",
+    "fdcId": null
+  },
+  "broccoli": {
+    "protein_per100": 3.8,
+    "kcal_per100": 25,
+    "source": "usda-fdc",
+    "fdcId": 170382
+  },
+  "burger bun": {
+    "protein_per100": 9,
+    "kcal_per100": 280,
+    "source": "curated",
+    "fdcId": null
+  },
+  "butter": {
+    "protein_per100": 0,
+    "kcal_per100": 900,
+    "source": "usda-fdc",
+    "fdcId": 171314
+  },
+  "cabbage": {
+    "protein_per100": 1.3,
+    "kcal_per100": 25,
+    "source": "usda-fdc",
+    "fdcId": 169975
+  },
+  "carrot": {
+    "protein_per100": 0.9,
+    "kcal_per100": 44,
+    "source": "usda-fdc",
+    "fdcId": 2709660
+  },
+  "cauliflower": {
+    "protein_per100": 2,
+    "kcal_per100": 26,
+    "source": "usda-fdc",
+    "fdcId": 2710801
+  },
+  "chana dal": {
+    "protein_per100": 8,
+    "kcal_per100": 160,
+    "source": "curated",
+    "fdcId": null
+  },
+  "cheddar cheese": {
+    "protein_per100": 23.3,
+    "kcal_per100": 409,
+    "source": "usda-fdc",
+    "fdcId": 2705709
+  },
+  "cheese": {
+    "protein_per100": 23.3,
+    "kcal_per100": 409,
+    "source": "usda-fdc",
+    "fdcId": 2705709
+  },
+  "cheese curds": {
+    "protein_per100": 24,
+    "kcal_per100": 350,
+    "source": "curated",
+    "fdcId": null
+  },
+  "chia seeds": {
+    "protein_per100": 16.5,
+    "kcal_per100": 486,
+    "source": "usda-fdc",
+    "fdcId": 2707590
+  },
+  "chicken": {
+    "protein_per100": 31,
+    "kcal_per100": 165,
+    "source": "curated",
+    "fdcId": null
+  },
+  "chickpea pasta": {
+    "protein_per100": 14,
+    "kcal_per100": 160,
+    "source": "curated",
+    "fdcId": null
+  },
+  "chickpeas": {
+    "protein_per100": 8.2,
+    "kcal_per100": 211,
+    "source": "usda-fdc",
+    "fdcId": 2707414
+  },
+  "chili powder": {
+    "protein_per100": 13,
+    "kcal_per100": 282,
+    "source": "curated",
+    "fdcId": null
+  },
+  "cilantro": {
+    "protein_per100": 2,
+    "kcal_per100": 23,
+    "source": "curated",
+    "fdcId": null
+  },
+  "cocoa powder": {
+    "protein_per100": 20,
+    "kcal_per100": 228,
+    "source": "curated",
+    "fdcId": null
+  },
+  "corn": {
+    "protein_per100": 2.2,
+    "kcal_per100": 91,
+    "source": "usda-fdc",
+    "fdcId": 2709921
+  },
+  "cottage cheese": {
+    "protein_per100": 7.3,
+    "kcal_per100": 85,
+    "source": "usda-fdc",
+    "fdcId": 2705757
+  },
+  "cream": {
+    "protein_per100": 2,
+    "kcal_per100": 340,
+    "source": "curated",
+    "fdcId": null
+  },
+  "cream cheese": {
+    "protein_per100": 6,
+    "kcal_per100": 342,
+    "source": "curated",
+    "fdcId": null
+  },
+  "cucumber": {
+    "protein_per100": 0.7,
+    "kcal_per100": 15,
+    "source": "curated",
+    "fdcId": null
+  },
+  "curry leaves": {
+    "protein_per100": 6,
+    "kcal_per100": 108,
+    "source": "curated",
+    "fdcId": null
+  },
+  "dal": {
+    "protein_per100": 8,
+    "kcal_per100": 140,
+    "source": "curated",
+    "fdcId": null
+  },
+  "dates": {
+    "protein_per100": 1.8,
+    "kcal_per100": 282,
+    "source": "curated",
+    "fdcId": null
+  },
+  "dumplings": {
+    "protein_per100": 8,
+    "kcal_per100": 180,
+    "source": "curated",
+    "fdcId": null
+  },
+  "egg": {
+    "protein_per100": 12.6,
+    "kcal_per100": 155,
+    "source": "usda-fdc",
+    "fdcId": 173424
+  },
+  "eggplant": {
+    "protein_per100": 1.1,
+    "kcal_per100": 27,
+    "source": "usda-fdc",
+    "fdcId": 2710802
+  },
+  "enchilada sauce": {
+    "protein_per100": 1.2,
+    "kcal_per100": 50,
+    "source": "curated",
+    "fdcId": null
+  },
+  "feta cheese": {
+    "protein_per100": 14.2,
+    "kcal_per100": 265,
+    "source": "usda-fdc",
+    "fdcId": 173420
+  },
+  "flour": {
+    "protein_per100": 9.6,
+    "kcal_per100": 332,
+    "source": "usda-fdc",
+    "fdcId": 168944
+  },
+  "garlic": {
+    "protein_per100": 6.6,
+    "kcal_per100": 143,
+    "source": "usda-fdc",
+    "fdcId": 2709786
+  },
+  "garlic sauce": {
+    "protein_per100": 2,
+    "kcal_per100": 300,
+    "source": "curated",
+    "fdcId": null
+  },
+  "ghee": {
+    "protein_per100": 0,
+    "kcal_per100": 900,
+    "source": "curated",
+    "fdcId": null
+  },
+  "ginger": {
+    "protein_per100": 1.8,
+    "kcal_per100": 80,
+    "source": "curated",
+    "fdcId": null
+  },
+  "gram flour": {
+    "protein_per100": 22,
+    "kcal_per100": 387,
+    "source": "curated",
+    "fdcId": null
+  },
+  "gravy": {
+    "protein_per100": 2,
+    "kcal_per100": 55,
+    "source": "curated",
+    "fdcId": null
+  },
+  "greek yogurt": {
+    "protein_per100": 10.3,
+    "kcal_per100": 61,
+    "source": "usda-fdc",
+    "fdcId": 330137
+  },
+  "green chili": {
+    "protein_per100": 2,
+    "kcal_per100": 40,
+    "source": "curated",
+    "fdcId": null
+  },
+  "ground chicken": {
+    "protein_per100": 23.3,
+    "kcal_per100": 189,
+    "source": "usda-fdc",
+    "fdcId": 171117
+  },
+  "ground meat": {
+    "protein_per100": 23,
+    "kcal_per100": 295,
+    "source": "usda-fdc",
+    "fdcId": 169447
+  },
+  "guacamole": {
+    "protein_per100": 2,
+    "kcal_per100": 150,
+    "source": "curated",
+    "fdcId": null
+  },
+  "herbs": {
+    "protein_per100": 3,
+    "kcal_per100": 40,
+    "source": "curated",
+    "fdcId": null
+  },
+  "honey": {
+    "protein_per100": 0.3,
+    "kcal_per100": 304,
+    "source": "curated",
+    "fdcId": null
+  },
+  "idli": {
+    "protein_per100": 4,
+    "kcal_per100": 150,
+    "source": "curated",
+    "fdcId": null
+  },
+  "kidney beans": {
+    "protein_per100": 10.5,
+    "kcal_per100": 173,
+    "source": "usda-fdc",
+    "fdcId": 2707386
+  },
+  "lentils": {
+    "protein_per100": 9,
+    "kcal_per100": 114,
+    "source": "usda-fdc",
+    "fdcId": 175254
+  },
+  "lettuce": {
+    "protein_per100": 0.9,
+    "kcal_per100": 20,
+    "source": "usda-fdc",
+    "fdcId": 2709789
+  },
+  "mango": {
+    "protein_per100": 0.8,
+    "kcal_per100": 60,
+    "source": "usda-fdc",
+    "fdcId": 2709242
+  },
+  "maple syrup": {
+    "protein_per100": 0,
+    "kcal_per100": 260,
+    "source": "curated",
+    "fdcId": null
+  },
+  "mayonnaise": {
+    "protein_per100": 1,
+    "kcal_per100": 680,
+    "source": "curated",
+    "fdcId": null
+  },
+  "milk": {
+    "protein_per100": 3.3,
+    "kcal_per100": 61,
+    "source": "usda-fdc",
+    "fdcId": 2705385
+  },
+  "millet flour": {
+    "protein_per100": 11,
+    "kcal_per100": 382,
+    "source": "curated",
+    "fdcId": null
+  },
+  "mixed fruit": {
+    "protein_per100": 0.8,
+    "kcal_per100": 60,
+    "source": "curated",
+    "fdcId": null
+  },
+  "mixed vegetables": {
+    "protein_per100": 2.6,
+    "kcal_per100": 65,
+    "source": "curated",
+    "fdcId": null
+  },
+  "moong beans": {
+    "protein_per100": 6.5,
+    "kcal_per100": 156,
+    "source": "usda-fdc",
+    "fdcId": 2707389
+  },
+  "moong dal": {
+    "protein_per100": 7,
+    "kcal_per100": 105,
+    "source": "curated",
+    "fdcId": null
+  },
+  "mustard seeds": {
+    "protein_per100": 26,
+    "kcal_per100": 508,
+    "source": "curated",
+    "fdcId": null
+  },
+  "naan": {
+    "protein_per100": 8,
+    "kcal_per100": 290,
+    "source": "curated",
+    "fdcId": null
+  },
+  "noodles": {
+    "protein_per100": 4.5,
+    "kcal_per100": 137,
+    "source": "usda-fdc",
+    "fdcId": 2708352
+  },
+  "oats": {
+    "protein_per100": 13.2,
+    "kcal_per100": 379,
+    "source": "usda-fdc",
+    "fdcId": 2708489
+  },
+  "okra": {
+    "protein_per100": 2,
+    "kcal_per100": 59,
+    "source": "usda-fdc",
+    "fdcId": 2709946
+  },
+  "olive oil": {
+    "protein_per100": 0,
+    "kcal_per100": 900,
+    "source": "usda-fdc",
+    "fdcId": 2710186
+  },
+  "olives": {
+    "protein_per100": 0.8,
+    "kcal_per100": 115,
+    "source": "curated",
+    "fdcId": null
+  },
+  "onion": {
+    "protein_per100": 0.9,
+    "kcal_per100": 38,
+    "source": "usda-fdc",
+    "fdcId": 2709795
+  },
+  "paneer": {
+    "protein_per100": 18,
+    "kcal_per100": 265,
+    "source": "curated",
+    "fdcId": null
+  },
+  "parmesan cheese": {
+    "protein_per100": 38,
+    "kcal_per100": 431,
+    "source": "curated",
+    "fdcId": null
+  },
+  "pasta": {
+    "protein_per100": 5.8,
+    "kcal_per100": 157,
+    "source": "usda-fdc",
+    "fdcId": 2708357
+  },
+  "pav bun": {
+    "protein_per100": 8,
+    "kcal_per100": 280,
+    "source": "curated",
+    "fdcId": null
+  },
+  "peanuts": {
+    "protein_per100": 26,
+    "kcal_per100": 567,
+    "source": "curated",
+    "fdcId": null
+  },
+  "peas": {
+    "protein_per100": 4.3,
+    "kcal_per100": 92,
+    "source": "usda-fdc",
+    "fdcId": 2709970
+  },
+  "pico de gallo": {
+    "protein_per100": 1,
+    "kcal_per100": 30,
+    "source": "curated",
+    "fdcId": null
+  },
+  "pita": {
+    "protein_per100": 9,
+    "kcal_per100": 275,
+    "source": "curated",
+    "fdcId": null
+  },
+  "pizza dough": {
+    "protein_per100": 8,
+    "kcal_per100": 270,
+    "source": "curated",
+    "fdcId": null
+  },
+  "poha": {
+    "protein_per100": 6,
+    "kcal_per100": 350,
+    "source": "curated",
+    "fdcId": null
+  },
+  "potato": {
+    "protein_per100": 1.9,
+    "kcal_per100": 126,
+    "source": "usda-fdc",
+    "fdcId": 2709385
+  },
+  "puri": {
+    "protein_per100": 6,
+    "kcal_per100": 400,
+    "source": "curated",
+    "fdcId": null
+  },
+  "quinoa": {
+    "protein_per100": 4.4,
+    "kcal_per100": 120,
+    "source": "usda-fdc",
+    "fdcId": 168917
+  },
+  "rice": {
+    "protein_per100": 2,
+    "kcal_per100": 96,
+    "source": "usda-fdc",
+    "fdcId": 2708422
+  },
+  "rice noodles": {
+    "protein_per100": 1.8,
+    "kcal_per100": 107,
+    "source": "usda-fdc",
+    "fdcId": 2708356
+  },
+  "roti": {
+    "protein_per100": 8,
+    "kcal_per100": 300,
+    "source": "curated",
+    "fdcId": null
+  },
+  "salsa": {
+    "protein_per100": 1.5,
+    "kcal_per100": 36,
+    "source": "curated",
+    "fdcId": null
+  },
+  "salt": {
+    "protein_per100": 0,
+    "kcal_per100": 0,
+    "source": "curated",
+    "fdcId": null
+  },
+  "sambar": {
+    "protein_per100": 3,
+    "kcal_per100": 60,
+    "source": "curated",
+    "fdcId": null
+  },
+  "seasoning": {
+    "protein_per100": 0,
+    "kcal_per100": 0,
+    "source": "curated",
+    "fdcId": null
+  },
+  "soy sauce": {
+    "protein_per100": 8,
+    "kcal_per100": 53,
+    "source": "curated",
+    "fdcId": null
+  },
+  "spices": {
+    "protein_per100": 0,
+    "kcal_per100": 250,
+    "source": "curated",
+    "fdcId": null
+  },
+  "spinach": {
+    "protein_per100": 3,
+    "kcal_per100": 23,
+    "source": "usda-fdc",
+    "fdcId": 169400
+  },
+  "tamarind water": {
+    "protein_per100": 0.3,
+    "kcal_per100": 25,
+    "source": "curated",
+    "fdcId": null
+  },
+  "tofu": {
+    "protein_per100": 10.9,
+    "kcal_per100": 85,
+    "source": "usda-fdc",
+    "fdcId": 173788
+  },
+  "tomato": {
+    "protein_per100": 0.8,
+    "kcal_per100": 20,
+    "source": "usda-fdc",
+    "fdcId": 2709719
+  },
+  "tomato sauce": {
+    "protein_per100": 1.6,
+    "kcal_per100": 32,
+    "source": "curated",
+    "fdcId": null
+  },
+  "toor dal": {
+    "protein_per100": 8,
+    "kcal_per100": 140,
+    "source": "curated",
+    "fdcId": null
+  },
+  "tortilla": {
+    "protein_per100": 8,
+    "kcal_per100": 310,
+    "source": "curated",
+    "fdcId": null
+  },
+  "tortilla chips": {
+    "protein_per100": 7,
+    "kcal_per100": 500,
+    "source": "curated",
+    "fdcId": null
+  },
+  "tzatziki": {
+    "protein_per100": 3,
+    "kcal_per100": 90,
+    "source": "curated",
+    "fdcId": null
+  },
+  "vanilla protein powder": {
+    "protein_per100": 70,
+    "kcal_per100": 375,
+    "source": "curated",
+    "fdcId": null
+  },
+  "vegetable broth": {
+    "protein_per100": 0.5,
+    "kcal_per100": 10,
+    "source": "curated",
+    "fdcId": null
+  },
+  "vegetables": {
+    "protein_per100": 2,
+    "kcal_per100": 50,
+    "source": "curated",
+    "fdcId": null
+  },
+  "waffle": {
+    "protein_per100": 7,
+    "kcal_per100": 290,
+    "source": "curated",
+    "fdcId": null
+  },
+  "zucchini": {
+    "protein_per100": 1.2,
+    "kcal_per100": 17,
+    "source": "curated",
+    "fdcId": null
+  }
+}
